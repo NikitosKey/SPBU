@@ -1,8 +1,8 @@
-PWD /Users/nikitamorozov/Documents/GitHub/SPBU/TeX/Homeworks/Algebra/Comlex numbers
+PWD /Users/nikitamorozov/Documents/GitHub/SPBU/first semestr/TeX/Homeworks/Algebra/Comlex numbers
 INPUT /usr/local/texlive/2023/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/nikitamorozov/Documents/GitHub/SPBU/TeX/Homeworks/Algebra/Comlex numbers/master.tex
+INPUT /Users/nikitamorozov/Documents/GitHub/SPBU/first semestr/TeX/Homeworks/Algebra/Comlex numbers/master.tex
 OUTPUT outputs/master.log
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/local/texlive/2023/texmf-dist/tex/latex/base/report.cls

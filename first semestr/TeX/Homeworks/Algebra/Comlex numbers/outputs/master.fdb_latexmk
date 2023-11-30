@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1700686043 "/Users/nikitamorozov/Documents/GitHub/SPBU/TeX/Homeworks/Algebra/Comlex numbers/master.tex" "outputs/master.pdf" "master" 1700686044 0
+["pdflatex"] 1701360121 "/Users/nikitamorozov/Documents/GitHub/SPBU/first semestr/TeX/Homeworks/Algebra/Comlex numbers/master.tex" "outputs/master.pdf" "master" 1701360123 0
   "../../../preamble.tex" 1700668005 8900 854f019988de607d5af4781572fc548d ""
-  "/Users/nikitamorozov/Documents/GitHub/SPBU/TeX/Homeworks/Algebra/Comlex numbers/master.tex" 1700667317 242 cfa0e180f60f67d18e8f6d7b053269b4 ""
+  "/Users/nikitamorozov/Documents/GitHub/SPBU/first semestr/TeX/Homeworks/Algebra/Comlex numbers/master.tex" 1700667317 242 cfa0e180f60f67d18e8f6d7b053269b4 ""
   "/Users/nikitamorozov/Library/texlive/2023/texmf-var/fonts/tfm/lh/lh-t2a/labx1000.tfm" 1700605864 3300 6abb8e321227ead2a8e929e5abc72bd3 ""
   "/Users/nikitamorozov/Library/texlive/2023/texmf-var/fonts/tfm/lh/lh-t2a/labx1440.tfm" 1700605669 3304 6a543c07045572737981351171e0505e ""
   "/Users/nikitamorozov/Library/texlive/2023/texmf-var/fonts/tfm/lh/lh-t2a/labx2074.tfm" 1700609078 3316 0992aa03d0c75498a0b6fb905d9eaab6 ""
@@ -305,9 +305,9 @@
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
   "master.tex" 1700667317 242 cfa0e180f60f67d18e8f6d7b053269b4 ""
   "material.tex" 1700686043 1410 ed511452880ac9d149058f72b334ed09 ""
-  "outputs/master.aux" 1700686044 1854 1da48c344514e3ca67359a1b5d964375 "pdflatex"
-  "outputs/master.out" 1700686044 917 447c526252d26dade8116e679e84cbeb "pdflatex"
-  "outputs/master.toc" 1700686044 440 513f2b41d252136eadcda737b2a3314d "pdflatex"
+  "outputs/master.aux" 1701360122 1854 1da48c344514e3ca67359a1b5d964375 "pdflatex"
+  "outputs/master.out" 1701360122 917 447c526252d26dade8116e679e84cbeb "pdflatex"
+  "outputs/master.toc" 1701360122 440 513f2b41d252136eadcda737b2a3314d "pdflatex"
   (generated)
   "outputs/master.aux"
   "outputs/master.log"
