@@ -1,1 +1,4 @@
-build/
+build/*
+debug/*
+!build/8_4
+!debug/8_4

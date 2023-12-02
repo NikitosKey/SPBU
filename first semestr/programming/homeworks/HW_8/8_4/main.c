@@ -1,10 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-void func (void){
-    printf("suck");
-}
+
 
 int main(void){
-    printf("Suck");
-    func();
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", n);
 }

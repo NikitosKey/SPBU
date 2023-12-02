@@ -1,0 +1,146 @@
+{
+
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+                 {// Execute the command to create the folder build in the root folder
+                         // The command executed outside the windows system is `mkdir -p build`
+                         // The Windows system executes the command `mkdir -Force build` in powershell
+            "label": "build_dir",
+            "command": "mkdir",
+            "type": "shell",
+            "args": [
+                "-p",
+                "build"
+            ],
+            "windows": {
+                "options": {
+                    "shell": {
+                        "executable": "powershell.exe"
+                    }
+                },
+                "args": [
+                    "-Force",
+                    "build"
+                ],
+            }
+        },
+                 {// Call cmake in the build folder for project configuration
+                         // The command executed outside the windows system is `cmake -DCMAKE_BUILD_TYPE=<Debug|Release|RelWithDebInfo|MinSizeRel> ../`
+                         // The windows system executes the command `cmake -DCMAKE_BUILD_TYPE=<Debug|Release|RelWithDebInfo|MinSizeRel> in the visual stuido environment../ -G "CodeBlocks-NMake Makefiles"`
+            "label": "cmake",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-DCMAKE_BUILD_TYPE=${input:CMAKE_BUILD_TYPE}",
+                                 "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON", // Generate compile_commands.json for c/c++ extension prompts
+                "../"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
+            "windows": {
+                "args": [
+                    "-DCMAKE_BUILD_TYPE=${input:CMAKE_BUILD_TYPE}",
+                    "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+                    "../",
+                    "-G",
+                    "\"CodeBlocks - NMake Makefiles\""
+                ],
+                "options": {
+                    "shell": {
+                        // "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio 12.0\\VC\\vcvarsall.bat",
+                                                 // Need to call the vs tool command prompt according to the installed vs version
+                        "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\Build\\vcvarsall.bat",
+                        "args": [
+                                                         "${input:PLATFORM}", //Specify the platform
+                                                         "-vcvars_ver=${input:vcvars_ver}", //Specify the vc environment version
+                            "&&"
+                        ]
+                    }
+                },
+            },
+            "dependsOn": [
+                                 "build_dir" // execute the task after task `build_dir`
+            ]
+        },
+                 {// Call cmake in the build folder to compile and build the debug program
+                         // The command executed is `cmake --build ./ --target all --`
+                         // The windows system needs to execute commands in the visual stuido environment as above
+            "label": "build",
+            "group": "build",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "./",
+                "--target",
+                "all",
+                "--"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+            },
+            "problemMatcher": "$gcc",
+            "windows": {
+                "options": {
+                    "shell": {
+                        // "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio 12.0\\VC\\vcvarsall.bat",
+                        "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\Build\\vcvarsall.bat",
+                        "args": [
+                            "${input:PLATFORM}",
+                            "-vcvars_ver=${input:vcvars_ver}",
+                            "&&"
+                        ]
+                    }
+                },
+                "problemMatcher": "$msCompile"
+            },
+            "dependsOn": [
+                                 "cmake" // execute the task after task `cmake`
+            ]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "CMAKE_BUILD_TYPE",
+            "type": "pickString",
+            "description": "What CMAKE_BUILD_TYPE do you want to create?",
+            "options": [
+                "Debug",
+                "Release",
+                "RelWithDebInfo",
+                "MinSizeRel",
+            ],
+            "default": "Debug"
+        },
+        {
+            "id": "PLATFORM",
+            "type": "pickString",
+            "description": "What PLATFORM do you want to create?",
+            "options": [
+                "x86",
+                "amd64",
+                "arm",
+                "x86_arm",
+                "x86_amd64",
+                "amd64_x86",
+                "amd64_arm",
+            ],
+            "default": "amd64"
+        },
+        {
+            "id": "vcvars_ver",
+            "type": "pickString",
+            "description": "What vcvars_ver do you want to create?",
+            "options": [
+                "14.2", // 2019
+                "14.1", // 2017
+                "14.0", // 2015
+            ],
+            "default": "14.2"
+        }
+    ]
+
+}
