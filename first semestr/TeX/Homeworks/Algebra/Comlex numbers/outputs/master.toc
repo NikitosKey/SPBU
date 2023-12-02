@@ -1,5 +1,0 @@
-\babel@toc {russian}{}\relax 
-\contentsline {chapter}{\numberline {1}Комплексные числа}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Алгебраическая форма}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Геометрическое представление}{2}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Тригонометрическая форма}{2}{section.1.3}%
