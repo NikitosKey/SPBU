@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "HW_8_2",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "HW_8_2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HW_8_2-Debug-1b7527e6c482121f9e4c.json",
+					"name" : "HW_8_2",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/nikitamorozov/Documents/Programming/CLionProjects/\u0441/SPBU/1 course/Homeworks/HW_8/HW_8_2/cmake-build-debug-coverage",
+		"source" : "/Users/nikitamorozov/Documents/Programming/CLionProjects/\u0441/SPBU/1 course/Homeworks/HW_8/HW_8_2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

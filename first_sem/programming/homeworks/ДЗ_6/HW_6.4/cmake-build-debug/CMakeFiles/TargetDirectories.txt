@@ -1,0 +1,3 @@
+/Users/nikitamorozov/CLionProjects/с/SPBU/1 course/Homeworks/ДЗ_6/HW_6.4/cmake-build-debug/CMakeFiles/HW_6_4.dir
+/Users/nikitamorozov/CLionProjects/с/SPBU/1 course/Homeworks/ДЗ_6/HW_6.4/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/nikitamorozov/CLionProjects/с/SPBU/1 course/Homeworks/ДЗ_6/HW_6.4/cmake-build-debug/CMakeFiles/rebuild_cache.dir

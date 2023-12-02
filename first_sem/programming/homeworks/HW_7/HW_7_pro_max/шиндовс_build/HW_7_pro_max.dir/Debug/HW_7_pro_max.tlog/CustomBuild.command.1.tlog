@@ -1,0 +1,10 @@
+^\\MAC\HOME\DOCUMENTS\PROGRAMMING\CLIONPROJECTS\С\SPBU\1 COURSE\HOMEWORKS\HW_7\HW_7_PRO_MAX\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-S//Mac/Home/Documents/Programming/CLionProjects/с/SPBU/1 course/Homeworks/HW_7/HW_7_pro_max" "-B//Mac/Home/Documents/Programming/CLionProjects/с/SPBU/1 course/Homeworks/HW_7/HW_7_pro_max/шиндовс_build" --check-stamp-file "//Mac/Home/Documents/Programming/CLionProjects/с/SPBU/1 course/Homeworks/HW_7/HW_7_pro_max/шиндовс_build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

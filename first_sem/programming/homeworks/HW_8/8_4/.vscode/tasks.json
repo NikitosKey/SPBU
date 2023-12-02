@@ -10,7 +10,7 @@
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "command": "mkdir -p build-realese && cd build-realese && cmake ${workspaceFolder} -DCMAKE_BUILD_TYPE=Release",
+            "command": "mkdir -p build-realese && cd build-realese && cmake ${workspaceFolder} -DCMAKE_BUILD_TYPE=Release && make",
             "group": "build",
         },
         {

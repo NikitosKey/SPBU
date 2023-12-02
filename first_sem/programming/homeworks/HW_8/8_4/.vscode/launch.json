@@ -2,16 +2,26 @@
     "version": "2.0.0",
     "configurations": [
         {
-            "name": "(lldb) Запустить",
+            "name": "Запуск",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build-debug/8_4",
+            "program": "${workspaceFolder}/build-realese/${workspaceFolderBasename}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
-            "MIMode": "lldb"
+            "MIMode": "lldb",
+            "preLaunchTask": "cmake_build_realese"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug in Terminal",
+            "program": "${workspaceFolder}/build-debug/${workspaceFolderBasename}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "cmake_build_debug"
         }
 
     ]
