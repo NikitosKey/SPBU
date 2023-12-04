@@ -1,3 +1,0 @@
-/Users/nikitamorozov/Documents/Programming/CLionProjects/с/SPBU/1 course/Homeworks/HW_8/HW_8_2/cmake-build-debug/CMakeFiles/HW_8_2.dir
-/Users/nikitamorozov/Documents/Programming/CLionProjects/с/SPBU/1 course/Homeworks/HW_8/HW_8_2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/nikitamorozov/Documents/Programming/CLionProjects/с/SPBU/1 course/Homeworks/HW_8/HW_8_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

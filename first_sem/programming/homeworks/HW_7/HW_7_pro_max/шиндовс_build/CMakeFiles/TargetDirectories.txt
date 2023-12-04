@@ -1,3 +1,0 @@
-//Mac/Home/Documents/Programming/CLionProjects/с/SPBU/1 course/Homeworks/HW_7/HW_7_pro_max/шиндовс_build/CMakeFiles/HW_7_pro_max.dir
-//Mac/Home/Documents/Programming/CLionProjects/с/SPBU/1 course/Homeworks/HW_7/HW_7_pro_max/шиндовс_build/CMakeFiles/ALL_BUILD.dir
-//Mac/Home/Documents/Programming/CLionProjects/с/SPBU/1 course/Homeworks/HW_7/HW_7_pro_max/шиндовс_build/CMakeFiles/ZERO_CHECK.dir

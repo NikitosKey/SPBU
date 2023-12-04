@@ -1,3 +1,0 @@
-/Users/nikitamorozov/Documents/Programming/CLionProjects/с/SPBU/1 course/Homeworks/HW_7/HW_7_pro_max/cmake-build-debug/CMakeFiles/HW_7_pro_max.dir
-/Users/nikitamorozov/Documents/Programming/CLionProjects/с/SPBU/1 course/Homeworks/HW_7/HW_7_pro_max/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/nikitamorozov/Documents/Programming/CLionProjects/с/SPBU/1 course/Homeworks/HW_7/HW_7_pro_max/cmake-build-debug/CMakeFiles/rebuild_cache.dir
