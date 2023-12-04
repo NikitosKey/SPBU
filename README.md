@@ -1,2 +1,2 @@
-<h1 align="center"> My personal repo of my education in university </h1>
+<h1 align="center"> My personal repository of university education </h1>
 
