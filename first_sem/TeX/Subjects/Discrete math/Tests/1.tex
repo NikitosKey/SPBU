@@ -1,0 +1,68 @@
+\input ../../my_simple_preamble.tex
+
+\begin{titlepage}
+    \title{Контрольная по дискрентной математике}
+    \author{Морозов Н.Ю}
+    \date{}
+\end{titlepage}
+
+\begin{document}
+
+    \maketitle  
+        
+    \section{}
+
+    $ \sphericalangle \quad f : A \longrightarrow B,\ |A| = k,\ |B| = n$ при $ n \leqslant  k $ только в этом случае возможна иньекция. 
+
+    \noindent Пусть N - искомое количество возможных отображений из $A$ в $B$, тогда
+
+    \begin{enumerate}
+        \item $N = A^k_n$, что справедливо для любых $n, k \in \mathbb{N}, \{0\} $ и удовлетворяющих условию.
+        \item Также это будет верно и для тех случаев когда оба множества пустые и когда $A$ пустое, а $B$ - любое
+        конечное, поскольку эти случаи не противоречат здравому смыслу и соотвестуют условиям выше.
+        \item А для $ \quad f : A \longrightarrow B, \ A - \varnothing, B$ -- любое, но не пустое не выполняется неравенство 
+        $ n \leqslant  k \Longrightarrow f$ не иньекция $\Longrightarrow$ этот случай не подходит.
+    \end{enumerate}
+
+    \section{}
+
+    Mорозов $ \Longrightarrow $ N = 7
+
+   \noindent $E_i$ -- матождиание для события вытащенно $i$ тузов.
+
+   
+
+    \begin{align}
+        &E = \sum_{i = 0}^{4} \left(\frac{C^{7-i}_{32} \cdot C^{i}_{4}}{C^7_{36}} \cdot i \right)  =
+        \sum_{i=0}^{4} \left( \frac{\frac{32!}{(7-i)!(32-7+i)!} \cdot \frac{4!}{i!(4-i)!}}{\frac{36!}{7!(36 - 7)!}} \cdot i\right)  = \frac{7}{9}\\
+        &D = \sum_{i=0}^{4} \left( \frac{\frac{32!}{(7-i)!(32-7+i)!} \cdot \frac{4!}{i!(4-i)!}}{\frac{36!}{7!(36 - 7)!}} \cdot i^2\right) - \left(\frac{7}{9}\right)^2 = \frac{232}{405}
+    \end{align}
+
+    \section{}
+
+    \begin{enumerate}
+        \item $34816572 = 34816725$
+        \item $34816725 = 34816752$
+        \item $34816752 = 34817256$
+        \item $34817256 = 34817265$
+        \item $34817265 = 34817526$
+        \item $34817526 = 34817562$
+        \item $34817562 = 34817625$
+        \item $34817625 = 34817652$
+    \end{enumerate}
+
+    \newpage
+
+    \section{}
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.8\linewidth]{кал лютый.png}
+
+        \end{figure}
+
+        
+        
+    
+
+\end{document}
