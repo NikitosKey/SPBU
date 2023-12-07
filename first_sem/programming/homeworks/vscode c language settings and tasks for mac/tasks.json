@@ -5,7 +5,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "cmake_build_realese",
+            "label": "cmake_build_realese_for_homewoks",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -14,7 +14,7 @@
             "group": "build",
         },
         {
-            "label": "cmake_build_debug",
+            "label": "cmake_build_debug_for_homeworks",
             "type": "shell",
             "options": {
                 "cwd": "${workspaceFolder}"
