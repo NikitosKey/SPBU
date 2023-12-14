@@ -1,0 +1,187 @@
+\documentclass[a4paper, fontsize=14pt]{article} % преамбула документа
+\usepackage{scrextend}
+\usepackage[left=2.0cm, right=1.5cm, top=2.0cm,
+bottom=2.0cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage{hyperref}
+\usepackage[english, russian]{babel}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{fontsize}
+\usepackage{pgfplots}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+\begin{titlepage}
+    \title{Контрольная по КВП}
+    \author{Морозов Никита 23.Б09}
+    \date{}
+\end{titlepage}
+
+
+\begin{document}
+
+    \definecolor{ffqqqq}{rgb}{1.,0.,0.}
+    
+    \maketitle
+
+    \centerline{Вариант 34} \bigskip
+
+    \noindent Привести уравнение кривой второго порядка к каноническому виду, найти координаты центра и фокусов в 
+    исходной системе координат и построить эскиз графика: $-3x^2 - 23y^2 - 48xy + 42x - 2y = 485$ . \bigskip
+
+    Решение: \bigskip
+
+    \begin{enumerate}
+        \item Приведем к каноническому виду: $a_{11}x^2 + 2a_{12}xy + a_{22}y^2 + 2a_{13}x + 2a_{23}y + a_{33} = 0$
+        
+        \begin{equation} \label{Canoic}-3x^2 - 48xy - 23y^2 + 42x - 2y - 485 = 0 \end{equation}
+
+        \item  Найдём центр кривой составив систему:
+        
+        $ 
+        \begin{cases}
+            a_{11}x_0 + a_{12}y_0 + a_{13} = 0\\
+            a_{12}x_0 + a_{22}y_0 + a_{23} = 0
+        \end{cases}
+        $
+        где $(x_0; y_0)$ - центр кривой
+
+        Подставим коэфициенты из \eqref{Canoic}.
+        \begin{equation} \label{Coordinates_system}
+            \begin{cases}
+                -3x_0 - 24y_0 + 21 = 0 \\
+                -24x_0 - 23y_0 - 1 = 0
+            \end{cases}
+        \end{equation}
+
+            $(-1;1)$ - центр кривой
+
+        \item Перенесём начало координат в центр прямой.
+        
+        Подставим в \eqref{Canoic}:
+
+        $$
+        \begin{cases}
+            x = x' -1\\
+            y = y' + 1
+        \end{cases}
+        $$
+
+        Получим:
+
+        $$-3(x -1)^2 - 48(x - 1)(y + 1) - 23(y + 1)^2 + 42(x -1) - 2(y + 1)- 485 = 0$$
+
+        $$ - 3 x^{2} - 48 x y - 23 y^{2} - 507 = 0$$
+        
+        \item 
+
+       $$ \delta = \begin{vmatrix} -3 && -24\\ -24 && -23\\\end{vmatrix} = -3 \cdot (-23) - (-24 \cdot (-24)) = -507$$ 
+
+       \begin{align*}
+       & \Delta = 
+       \begin{vmatrix}
+            -3 & -24 & 21\\
+            -24 & -23 & - 1\\
+            \quad 21 & -1 & -485\\
+       \end{vmatrix}
+       = -3 ((-23 \cdot (- 485)) - (-1  \cdot (-1))) + 24 ((-24 \cdot (-485)) -\\
+        & - (21 \cdot (-1))) + 21 ((-24 \cdot (-1)) - (21 \cdot (-23))) = 257049
+       \end{align*}
+
+       $\frac{\Delta}{\delta} = -507 \Longrightarrow$ Есть центр симетрии.
+
+       $\delta < 0 \ \vee \ \Delta \neq 0 \Longrightarrow$ это гипербола
+
+       \item Подберем коэфициенты в новой системе координат методом инвариантов.
+       
+
+    $$
+    \begin{cases}
+        I_1 = -3 -23 = -26 = a'_{11} + a'_{22}\\
+        I_2 = \delta = -507 = a'_{11} \cdot a'_{22}\\
+        I_3 = \Delta = 257049 = a'_{11} \cdot a'_{22} \cdot a'_{33}
+    \end{cases} 
+    $$
+
+    $$
+    [[a_{11} = -39, \  a_{22} = 13, \ a_{33} = -507], \ [a_{11} = 13, \  a_{22} = -39, \ a_{33} = -507]]
+    $$
+
+    Получим два варианта решения:
+
+    1) $- \frac{x^{2}}{13} + \frac{y^{2}}{39} = 1$
+    
+    2) $\frac{x^{2}}{39} - \frac{y^{2}}{13} = 1$ \bigskip
+
+    Их фокусы:
+
+    1) $c = \sqrt{13 + 39} = 2 \sqrt{13} \Longrightarrow [(0, 2 \sqrt{13}), (0, -2 \sqrt{13})]$
+
+    2) $c = \sqrt{13 + 39} = 2 \sqrt{13} \Longrightarrow [(2 \sqrt{13}, 0), (-2 \sqrt{13}, 0)] $
+   
+    \begin{figure}[b]
+        \centering
+        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+            \begin{axis}[
+            x=0.5cm,y=0.5cm,
+            axis lines=middle,
+            ymajorgrids=true,
+            xmajorgrids=true,
+            xmin=-10.0,
+            xmax=10.0,
+            ymin=-10.0,
+            ymax=10.0,
+            xtick={-10.0,-8.0,...,10.0},
+            ytick={-10.0,-8.0,...,10.0},]
+            \clip(-10.,-10.) rectangle (10.,10.);
+            \draw [samples=50,domain=-0.99:0.99,rotate around={90.:(0.,0.)},xshift=0.cm,yshift=0.cm,line width=2.pt,color=ffqqqq] plot ({6.244997998398398*(1+(\x)^2)/(1-(\x)^2)},{3.605551275463989*2*(\x)/(1-(\x)^2)});
+            \draw [samples=50,domain=-0.99:0.99,rotate around={90.:(0.,0.)},xshift=0.cm,yshift=0.cm,line width=2.pt,color=ffqqqq] plot ({6.244997998398398*(-1-(\x)^2)/(1-(\x)^2)},{3.605551275463989*(-2)*(\x)/(1-(\x)^2)});
+            \begin{scriptsize}
+            \draw[color=ffqqqq] (-4.9181404179732375,12.822631462561157) node {$eq1$};
+            \end{scriptsize}
+            \end{axis}
+            \end{tikzpicture}
+            \label{first_plot}
+            \caption{Первое решение}
+    \end{figure}
+
+    \begin{figure}[ht]
+        \centering
+        \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+            \begin{axis}[
+            x=0.5cm,y=0.5cm,
+            axis lines=middle,
+            ymajorgrids=true,
+            xmajorgrids=true,
+            xmin=-10.0,
+            xmax=10.0,
+            ymin=-10.0,
+            ymax=10.0,
+            xtick={-10.0,-8.0,...,10.0},
+            ytick={-10.0,-8.0,...,10.0},]
+            \clip(-10.,-10.) rectangle (10.,10.);
+            \draw [samples=50,domain=-0.99:0.99,rotate around={0.:(0.,0.)},xshift=0.cm,yshift=0.cm,line width=2.pt,color=ffqqqq] plot ({6.244997998398398*(1+(\x)^2)/(1-(\x)^2)},{3.605551275463989*2*(\x)/(1-(\x)^2)});
+            \draw [samples=50,domain=-0.99:0.99,rotate around={0.:(0.,0.)},xshift=0.cm,yshift=0.cm,line width=2.pt,color=ffqqqq] plot ({6.244997998398398*(-1-(\x)^2)/(1-(\x)^2)},{3.605551275463989*(-2)*(\x)/(1-(\x)^2)});
+            \begin{scriptsize}
+            \draw[color=ffqqqq] (12.848903952263086,5.647478928427263) node {$eq1$};
+            \end{scriptsize}
+            \end{axis}
+            \end{tikzpicture}
+            \label{second_plot}
+            \caption{Второе решение}
+    \end{figure}
+
+
+
+
+
+    \end{enumerate}
+
+
+\end{document}
