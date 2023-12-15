@@ -53,17 +53,52 @@
         (B \ \backslash \ C) = \\ &=x \in A \ \backslash \ (B \ \backslash \ C)
     \end{align*}
 
-    \section{}
-    Высказывание $\forall x(\lnot P(x) \rightarrow (P(x) \ \vee \ \lnot(\lnot Q(x) \rightarrow P(x))))$ ложно. Докажите, что 
-    $\forall x, P(x)$ ложно, а $\exists x : Q(x)$ истинно.
+    \section{\normalsize \normalfont Высказывание $\forall x(\lnot P(x) \rightarrow (P(x) \ \vee \ \lnot(\lnot Q(x) \rightarrow P(x))))$ ложно. Докажите, что 
+    $\forall x, P(x)$ ложно, а $\exists x : Q(x)$ истинно.}
+
 
     Решение:
 
     \begin{align*}
-        \lnot P(x) \rightarrow (P(x) \ \vee \ \lnot(\lnot Q(x) \rightarrow P(x))) = 0 \Longrightarrow 
+        &\lnot P(x) \rightarrow (P(x) \ \vee \ \lnot(\lnot Q(x) \rightarrow P(x))) = 0 \Longrightarrow \overbrace{\lnot \underbrace
+        {P(x)}_0}^1 \rightarrow \overbrace{(P(x) \ \vee \ \lnot(\lnot Q(x) \rightarrow P(x)))}^0 = 0 \Longrightarrow\\
+        &\Longrightarrow (0 \ \vee \ \overbrace{\lnot(\lnot \underbrace{Q(x)}_1 \rightarrow 0))}^0 = 0 \Longrightarrow P(x) = 0, \ Q(x) = 1
     \end{align*}
-    
-    
 
+    \section{\normalsize \normalfont Сколько подмножеств в множестве, состоящем из $n$ элементов?}
+
+    Решение: 
+
+    \begin{enumerate}
+        \item Сколько различных подмножеств длины 1? 
+        
+        Если взять множество длинны $n$, то мы имеем только $n$ отличных подномжеств из одного элемента.
+
+        Допустим, что это размещения $C_n^1 = \frac{n!}{1!(n-1)!} = n$
+
+        \item Сколько для 2?
+        
+       $$C_n^2 = \frac{n!}{2!(n-2)!} = \frac{n (n - 1)}{2}$$
+
+        \item Для $n-1$
+        
+        $$C_n^{n-1} = \frac{n!}{(n-1)!(n-n+1)!} = n$$
+
+        \item Для $n$ - одно.
+        
+        $$C^k_n = \frac{n!}{n!(n-n)!} = 1$$
+        
     
+        \item  Количество множеств в подномжестве:
+        
+        $$ \sum_{k = 0}^{n} C_n^k$$
+        
+    \end{enumerate}
+
+
+
+ 
+
+
+        
 \end{document}
