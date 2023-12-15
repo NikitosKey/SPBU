@@ -1,16 +1,5 @@
-\documentclass[a4paper, fontsize=12pt]{article} % преамбула документа
-\usepackage{scrextend}
-\usepackage[left=2.0cm, right=1.5cm, top=2.0cm,
-bottom=2.0cm]{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage[T2A]{fontenc}
-\usepackage{hyperref}
-\usepackage[english, russian]{babel}
-\usepackage{amsmath,amsfonts,amssymb}
-\usepackage{graphicx}
-\usepackage{setspace}
-\usepackage{fontsize}
-
+\documentclass[a4paper, fontsize=10pt]{article}
+\input{../../my_simple_preamble.tex}
 
 \begin{titlepage}
     \title{Homework 1}
@@ -21,13 +10,20 @@ bottom=2.0cm]{geometry}
 \begin{document}
     \maketitle
 
+    \section{\normalsize \normalfont Упростить формулу:}
+    $$((P \longrightarrow Q) \longrightarrow P) \longrightarrow P$$
+
+    Решение:
+
+    \begin{align*}
+        &((P \longrightarrow Q) \longrightarrow P) \longrightarrow P = \lnot(\lnot(\lnot P \ \vee \ Q) 
+        \ \vee \ P) \ \vee \ P = ((\lnot P \ \vee \ Q) \ \wedge \ P) \ \vee \ P =(P \ \wedge \ Q) \ \vee \ P  
+    \end{align*}
+
+
     \section{}
 
-    умею
-
-    \section{\normalsize \normalfont }
-
-    1. Определить значение истинности высказывания, считая, что все переменные
+    1) Определить значение истинности высказывания, считая, что все переменные
     пробегают множество действительных чисел.
 
     $$\exists a : \forall b \  \exists x : x^2 + ax + b = 0$$ \smallskip
@@ -38,7 +34,7 @@ bottom=2.0cm]{geometry}
     При $a^2 < 4b$ данное выражение ложно, так как появляются мнимые числа.
 
     \smallskip
-    \noindent 2. Построить отрицание к данному высказыванию. \bigskip
+    \noindent 2) Построить отрицание к данному высказыванию. \bigskip
 
     Решение:
 
@@ -46,16 +42,15 @@ bottom=2.0cm]{geometry}
     a \ \exists b : \forall x \ x^2 + ax + b \neq 0$$
 
     
-    \section{}
-    Доказать, что $A \  \backslash \  (B \ \backslash \  C) = (A \ \backslash \ B) \cup (A \cap C)$
+    \section{\normalsize \normalfont Доказать, что:}
+    $$A \  \backslash \  (B \ \backslash \  C) = (A \ \backslash \ B) \cup (A \cap C)$$
 
     Решение:
     \begin{align*}
-        &x \in (A \ \backslash \ B) \cup (A \cap C) = x \in (A \ \backslash \ B) \ \vee \ x \in (A \cap C) =\\
-        &=(x \in A \ \wedge \ x \notin B) \ \vee \ (x \in A \ \wedge x \in C) = x \in A \  \wedge \ (x \notin 
-        B \ \vee \ x \in C) =\\
-        &= x \in A \ \wedge \lnot  (x \notin B \ \vee \ x \in C) = x \in A \ \wedge x \notin (B \ \backslash \ C) =
-        x \in A \ \backslash \ (B \ \backslash \ C)
+        &x \in (A \ \backslash \ B) \cup (A \cap C) = x \in (A \ \backslash \ B) \ \vee \ x \in (A \cap C) =
+        (x \in A \ \wedge \ x \notin B) \ \vee \ (x \in A \ \wedge x \in C) =\\ &= x \in A \  \wedge \ (x \notin B \
+        \vee \ x \in C) = x \in A \ \wedge \lnot  (x \notin B \ \vee \ x \in C) = x \in A \ \wedge x \notin
+        (B \ \backslash \ C) = \\ &=x \in A \ \backslash \ (B \ \backslash \ C)
     \end{align*}
 
     \section{}
@@ -63,6 +58,10 @@ bottom=2.0cm]{geometry}
     $\forall x, P(x)$ ложно, а $\exists x : Q(x)$ истинно.
 
     Решение:
+
+    \begin{align*}
+        \lnot P(x) \rightarrow (P(x) \ \vee \ \lnot(\lnot Q(x) \rightarrow P(x))) = 0 \Longrightarrow 
+    \end{align*}
     
     
 
