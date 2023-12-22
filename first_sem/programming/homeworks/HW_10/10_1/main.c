@@ -30,8 +30,8 @@ int main() {
             free(min_word);
             min_word = NULL;
             min_word = malloc(word_size+1);
-            strcpy(min_word, last_word);
         }
+            strcpy(min_word, last_word);
         free(last_word);
         last_word = NULL;
     }
